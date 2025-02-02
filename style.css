@@ -2017,3 +2017,128 @@ footer {
         margin-top: 100px;  
     }
 }
+
+
+.button1{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.02s;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(37, 37, 37);
+    z-index: 0;
+    box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .button1:hover {
+    background: rgb(193, 228, 248);
+    color: rgb(33, 0, 85);
+  }
+  
+  .button1:active {
+    transform: scale(0.97);
+  }
+  
+  .hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .hoverEffect div {
+    background: rgb(222, 0, 75);
+    background: linear-gradient(
+      90deg,
+      rgba(222, 0, 75, 1) 0%,
+      rgba(191, 70, 255, 1) 49%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    border-radius: 40rem;
+    width: 10rem;
+    height: 10rem;
+    transition: 0.4s;
+    filter: blur(20px);
+    animation: effect infinite 3s linear;
+    opacity: 0.5;
+  }
+  
+  .button1:hover .hoverEffect div {
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  @keyframes effect {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .btn {
+    position: relative;
+    padding: 0.6rem 1.2rem; /* Make button smaller */
+    font-size: 1.8rem; /* Reduce text size */
+    font-weight: 600;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    min-width: 100px; /* Reduce button width */
+    z-index: 1;
+    align-self: flex-start; /* Align button to the left */
+    margin-left: 20px; /* Optional: Adjust spacing from the left */
+}
+
+/* Neon Pulse Effect */
+.neon-pulse {
+    background: #000;
+    border: 2px solid #0ff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    overflow: visible;
+}
+
+.neon-pulse::before,
+.neon-pulse::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 2px solid #0ff;
+    border-radius: inherit;
+    animation: pulseOut 2s ease-out infinite;
+    opacity: 0;
+}
+
+.neon-pulse::after {
+    animation-delay: 1s;
+}
+
+@keyframes pulseOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+  
+  
